@@ -1,0 +1,82 @@
+github:
+nikvagh
+Nvaghani@123
+
+igeek github:
+nisha khrana
+https://github.com/
+Username : Ash2117
+pass: Nisha@2121
+theashdev0121@gmail.com
+personal access token:
+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
+
+nikvagh:
+personal access token:
+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
+
+remote barnch:
+git remote -v
+
+all branches
+git remote -a
+
+all branches data
+git remote show origin
+
+clone public repo:
+git clone https://github.com/strafe/project.git
+
+clone private repository:
+git clone https://[myusername]:[personal_access_token]@github.com/resto/ftherepolink.git
+
+
+remove file or folder from staging:
+git rm -r --cached <folder>
+
+push the code on specific reomte branch:
+git push origin [branch name]
+
+fetch branch:
+git fetch origin [branch name]
+
+Pull changes from remote repository:
+git pull origin [branch name]
+
+set local project origin to remote:
+git remote set-url origin https://github.com/MyRepo/project.git 
+
+set local project origin to remote: (if not working simple way & need user auth)
+git remote set-url origin https://[myusername]:[personal_access_token]@github.com/[ORGANISATION]/[REPO].git
+
+conflict chnages on local:
+git diff --name-only --diff-filter=U
+
+Create a new branch and switch to it:
+git checkout -b [branch name]
+
+remove folder or files from commit(before push):
+git reset HEAD node_modules
+
+
+
+===========================
+merge barnches:
+
+If you have remote-tracking branches set up locally, it's as simple as:
+
+git checkout production
+git merge development
+git push origin production
+
+If you have not yet set up remote-tracking branches, you could do something like:
+
+git fetch origin
+git checkout production     # or `git checkout -b production origin/production` if you haven't set up production branch locally
+git merge origin/development
+git push origin production
+
+===========================
+
+git checkout origin/main
+git fetch origin
