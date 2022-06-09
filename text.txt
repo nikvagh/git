@@ -9,7 +9,7 @@ Username : Ash2117
 pass: Nisha@2121
 theashdev0121@gmail.com
 personal access token:
-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
+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
 
 nikvagh:
 personal access token:
@@ -30,6 +30,11 @@ git clone https://github.com/strafe/project.git
 clone private repository:
 git clone https://[myusername]:[personal_access_token]@github.com/resto/ftherepolink.git
 
+clone specific branch repository:
+git clone -b theashdev/feedback git@github.com:deko96/treatsdelivery.git
+private:
+git clone -b theashdev/feedback https://[myusername]:[personal_access_token]@github.com/resto/ftherepolink.git
+git clone -b theashdev/feedback https://Ash2117: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@github.com/deko96/treatsdelivery.git
 
 remove file or folder from staging:
 git rm -r --cached <folder>
@@ -59,7 +64,6 @@ remove folder or files from commit(before push):
 git reset HEAD node_modules
 
 
-
 ===========================
 merge barnches:
 
@@ -80,3 +84,28 @@ git push origin production
 
 git checkout origin/main
 git fetch origin
+
+
+
+===================================bit bucket ====================================================================================
+git remote add origin
+https://<your_username>@bitbucket.org/<workspace_ID>/<repo_name>.git
+
+git remote add origin https://rajigt@bitbucket.org/canaveridevteam/phppos.git
+
+ git remote set-url origin https://rajigt@bitbucket.org/canaveridevteam/phppos.git
+
+
+clone for private:
+git clone username@host:/path/to/repository
+ex:
+git clone https://rajigt@bitbucket.org/canaveridevteam/phppos.git
+
+=====================================
+git buffer issue on push the code ( most of macos)
+git config --global ssh.postBuffer 524288000   ------s
+
+git config --global http.postBuffer 524288000
+#If it's not enough double it!
+git config --global http.postBuffer 1048576000
+
