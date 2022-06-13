@@ -9,7 +9,7 @@ Username : Ash2117
 pass: Nisha@2121
 theashdev0121@gmail.com
 personal access token:
-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
+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
 
 nikvagh:
 personal access token:
@@ -34,7 +34,7 @@ clone specific branch repository:
 git clone -b theashdev/feedback git@github.com:deko96/treatsdelivery.git
 private:
 git clone -b theashdev/feedback https://[myusername]:[personal_access_token]@github.com/resto/ftherepolink.git
-git clone -b theashdev/feedback https://Ash2117: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@github.com/deko96/treatsdelivery.git
+git clone -b theashdev/feedback https://Ash2117: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@github.com/deko96/treatsdelivery.git
 
 remove file or folder from staging:
 git rm -r --cached <folder>
@@ -53,6 +53,8 @@ git remote set-url origin https://github.com/MyRepo/project.git
 
 set local project origin to remote: (if not working simple way & need user auth)
 git remote set-url origin https://[myusername]:[personal_access_token]@github.com/[ORGANISATION]/[REPO].git
+
+git remote set-url origin https://Ash2117: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@github.com/deko96/treatsdelivery.git
 
 conflict chnages on local:
 git diff --name-only --diff-filter=U
@@ -108,4 +110,3 @@ git config --global ssh.postBuffer 524288000   ------s
 git config --global http.postBuffer 524288000
 #If it's not enough double it!
 git config --global http.postBuffer 1048576000
-
