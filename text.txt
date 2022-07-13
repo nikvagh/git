@@ -9,7 +9,7 @@ Username : Ash2117
 pass: Nisha@2121
 theashdev0121@gmail.com
 personal access token:
-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
+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
 
 nikvagh:
 personal access token:
@@ -34,7 +34,7 @@ clone specific branch repository:
 git clone -b theashdev/feedback git@github.com:deko96/treatsdelivery.git
 private:
 git clone -b theashdev/feedback https://[myusername]:[personal_access_token]@github.com/resto/ftherepolink.git
-git clone -b theashdev/feedback https://Ash2117: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@github.com/deko96/treatsdelivery.git
+git clone -b theashdev/feedback https://Ash2117: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@github.com/deko96/treatsdelivery.git
 
 remove file or folder from staging:
 git rm -r --cached <folder>
@@ -54,9 +54,14 @@ git remote set-url origin https://github.com/MyRepo/project.git
 set local project origin to remote: (if not working simple way & need user auth)
 git remote set-url origin https://[myusername]:[personal_access_token]@github.com/[ORGANISATION]/[REPO].git
 
-git remote set-url origin https://Ash2117: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@github.com/deko96/treatsdelivery.git
+git remote set-url origin https://Ash2117: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@github.com/deko96/treatsdelivery.git
 
-conflict chnages on local:
+via ssh:
+git remote set-url origin git@github.com:deko96/treatsdelivery.git   -success
+git remote add origin git@github.com:deko96/treatsdelivery.git
+
+
+conflict changes on local:
 git diff --name-only --diff-filter=U
 
 Create a new branch and switch to it:
@@ -65,6 +70,17 @@ git checkout -b [branch name]
 remove folder or files from commit(before push):
 git reset HEAD node_modules
 
+
+===========================
+
+want to pull all branch from server to local - and create new branch from existing one - 
+git pull --all
+git checkout origin/experimental   - checkout remote branch
+git checkout test1   - create new local branch from remote branch
+git push -u  origin/test1 - push new branch
+
+demo link:
+https://stackoverflow.com/questions/67699/how-do-i-clone-all-remote-branches
 
 ===========================
 merge barnches:
@@ -88,15 +104,11 @@ git checkout origin/main
 git fetch origin
 
 
-
 ===================================bit bucket ====================================================================================
 git remote add origin
 https://<your_username>@bitbucket.org/<workspace_ID>/<repo_name>.git
-
 git remote add origin https://rajigt@bitbucket.org/canaveridevteam/phppos.git
-
- git remote set-url origin https://rajigt@bitbucket.org/canaveridevteam/phppos.git
-
+git remote set-url origin https://rajigt@bitbucket.org/canaveridevteam/phppos.git
 
 clone for private:
 git clone username@host:/path/to/repository
@@ -110,3 +122,12 @@ git config --global ssh.postBuffer 524288000   ------s
 git config --global http.postBuffer 524288000
 #If it's not enough double it!
 git config --global http.postBuffer 1048576000
+
+
+=====================================
+clone specific branch from live:
+git clone remotes/origin/theashdev/feedback
+
+
+
+
