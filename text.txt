@@ -3,7 +3,7 @@ nikvagh
 Nvaghani@123
 
 igeek github:
-nisha khrana
+nisha khurana
 https://github.com/
 Username : Ash2117
 pass: Nisha@2121
@@ -71,6 +71,23 @@ remove folder or files from commit(before push):
 git reset HEAD node_modules
 
 
+get commit list:
+git log --oneline
+
+view commit:
+git show <commit-hash>
+
+create new branch from specific commit:
+C:\wamp64\www\treats3\treatsdelivery\database\migrations
+
+git checkout -b branch_name <commit-hash or HEAD~3>
+
+
+===========================
+
+point local branch to remote
+https://stackoverflow.com/questions/520650/make-an-existing-git-branch-track-a-remote-branch
+
 ===========================
 
 want to pull all branch from server to local - and create new branch from existing one - 
@@ -129,5 +146,54 @@ clone specific branch from live:
 git clone remotes/origin/theashdev/feedback
 
 
+====================================
+rebase branch means - 
+1. dev
+2. feedback 
+git checkout feedback
+git rebase dev
+
+they move entire dev commits to feedback 
+
+rebase pull from live to specific branch
+1. git checkout ikdev/feedback
+2. git pull --rebase origin dev
+
+3. if any conflict then resolve it.
+4. git rebase --continue
+5. when you see different display - press crl+Q
+
+
+=====================================
+local rebase
+
+Git in feature
+Git rebase master
+Conflict solve one by one (pointer in in rebase, not on specific branch) 
+Git status
+Git rebase --continue 
+After last conflict solved you will automatically move on feature branch
+Git checkout master
+Git merge feature
+
+
+================================================== pull request conflict issue (when anyone share with you) ===============================
+Step 1: Clone the repository or update your local repository with the latest changes.
+
+git pull origin dev
+Step 2: Switch to the head branch of the pull request.
+
+git checkout ikdev/feedback
+Step 3: Merge the base branch into the head branch.
+
+git merge dev
+Step 4: Fix the conflicts and commit the result.
+
+See Resolving a merge conflict using the command line for step-by-step instructions on resolving merge conflicts.
+Step 5: Push the changes.
+
+git push -u origin ikdev/feedback
+
+====================================
 
 
