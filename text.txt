@@ -125,6 +125,10 @@ git fetch origin
 git forcefully convert branch to another:
 git branch -f signup_changes dev   //signup_changes copy whole things from dev and remove another things
 
+
+forcefully reset barnch on origin barnch -------
+git reset --hard origin/dev
+
 ===================================bit bucket ====================================================================================
 git remote add origin
 https://<your_username>@bitbucket.org/<workspace_ID>/<repo_name>.git
@@ -199,5 +203,18 @@ Step 5: Push the changes.
 git push -u origin ikdev/feedback
 
 ====================================
+push big file into git
 
+1. install git lfs
+https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage
+
+2. configure git lfs
+https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage 
+
+3.
+git lfs track "*.psd"
+git add path/to/file.psd
+git commit -m "add file.psd"
+git push
+====================================
 
